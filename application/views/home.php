@@ -35,7 +35,7 @@
                 <td><?php echo $row->varian ?></td>
                 <td><?php echo $row->jenis_kendaraan ?></td>
                 <td>
-                    <a href="">View</a>
+                    <a href="<?php echo base_url('Welcome/formDetail/') . $row->id ?>">View</a>
                     <a href="<?php echo base_url('Welcome/formEdit/') . $row->id ?>">Edit</a>
                     <a href="<?php echo base_url('Welcome/DeleteMobil/') . $row->id ?>">Delete</a>
                 </td>

@@ -64,6 +64,20 @@ class Welcome extends CI_Controller
 		$this->load->view('form_edit', $DATA);
 	}
 
+	public function formDetail($id)
+	{
+		//echo "<prev>";
+		//echo print_r($id);
+		//echo "</prev>";
+		//memanggil data detail mobil
+		$recordMobil = $this->M_Mobil->getDataMobilDetail($id);
+		//memasukkan data pada elemen input
+		$DATA = array('data_mobil' => $recordMobil);
+
+		//panggilviewFormEdit
+		$this->load->view('form_view', $DATA);
+	}
+
 	public function InsertMobil()
 	{
 		//tangkap nilai form action dari Form Input
