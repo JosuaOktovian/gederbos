@@ -32,4 +32,11 @@ class M_Mobil extends CI_Model
         $query = $this->db->get('tb_mobil');
         return $query->row();
     }
+
+    //query database delete
+    public function DeleteMobil($id)
+    {
+        $this->db->where('id', $id);
+        $this->db->delete('tb_mobil');
+    }
 }

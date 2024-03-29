@@ -37,7 +37,7 @@
                 <td>
                     <a href="">View</a>
                     <a href="<?php echo base_url('Welcome/formEdit/') . $row->id ?>">Edit</a>
-                    <a href="">Delete</a>
+                    <a href="<?php echo base_url('Welcome/DeleteMobil/') . $row->id ?>">Delete</a>
                 </td>
             </tr>
 

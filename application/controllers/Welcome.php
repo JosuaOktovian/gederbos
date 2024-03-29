@@ -92,4 +92,35 @@ class Welcome extends CI_Controller
 		//mengarahkan ke halaman selanjutnya ketika dijalankan
 		redirect(base_url('Welcome/index'));
 	}
+
+	public function EditMobil($id)
+	{
+		//ambil input update
+		$merk = $this->input->post('merk');
+		$varian = $this->input->post('varian');
+		$jenis_bahan_bakar = $this->input->post('jenis_bahan_bakar');
+		$jenis_kendaraan = $this->input->post('jenis_kendaraan');
+		$transmisi = $this->input->post('transmisi');
+		$kapasitas_mesin = $this->input->post('kapasitas_mesin');
+		$tenaga = $this->input->post('tenaga');
+
+		$DataUpdate = array(
+			'merk' => $merk,
+			'varian' => $varian,
+			'jenis_bahan_bakar' => $jenis_bahan_bakar,
+			'jenis_kendaraan' => $jenis_kendaraan,
+			'transmisi' => $transmisi,
+			'kapasitas_mesin' => $kapasitas_mesin,
+			'tenaga' => $tenaga,
+		);
+
+		$this->M_Mobil->EditDataMobil($DataUpdate, $id);
+		redirect(base_url());
+	}
+
+	public function DeleteMobil($id)
+	{
+		$this->M_Mobil->DeleteMobil($id);
+		redirect(base_url());
+	}
 }
