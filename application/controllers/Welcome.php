@@ -52,9 +52,9 @@ class Welcome extends CI_Controller
 
 	public function formEdit($id)
 	{
-		echo "<prev>";
-		echo print_r($id);
-		echo "</prev>";
+		//echo "<prev>";
+		//echo print_r($id);
+		//echo "</prev>";
 		//memanggil data detail mobil
 		$recordMobil = $this->M_Mobil->getDataMobilDetail($id);
 		//memasukkan data pada elemen input

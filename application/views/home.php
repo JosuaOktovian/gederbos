@@ -36,7 +36,7 @@
                 <td><?php echo $row->jenis_kendaraan ?></td>
                 <td>
                     <a href="">View</a>
-                    <a href="<?php echo base_url('Welcome/formEdit/') . $row->varian ?>">Edit</a>
+                    <a href="<?php echo base_url('Welcome/formEdit/') . $row->id ?>">Edit</a>
                     <a href="">Delete</a>
                 </td>
             </tr>

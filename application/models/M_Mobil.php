@@ -21,14 +21,14 @@ class M_Mobil extends CI_Model
     //query database edit data mobil
     public function EditDataMobil($data, $id)
     {
-        $this->db->where('varian', $id);
+        $this->db->where('id', $id);
         $this->db->update('tb_mobil', $data);
     }
 
     //query database get detail untuk form edit
     public function getDataMobilDetail($id)
     {
-        $this->db->where('varian', $id);
+        $this->db->where('id', $id);
         $query = $this->db->get('tb_mobil');
         return $query->row();
     }
