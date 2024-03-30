@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Welcome extends CI_Controller
+class Mobil extends CI_Controller
 {
 
 	/**
@@ -36,7 +36,7 @@ class Welcome extends CI_Controller
 		$DATA = array('data_mobil' => $recordMobil);
 
 		//panggilviewHome
-		$this->load->view('home', $DATA); //$DATA = panggil arraydata
+		$this->load->view('mobil/home', $DATA); //$DATA = panggil arraydata
 
 		//tes tampilkan data
 		//echo "<prev>";
@@ -47,7 +47,7 @@ class Welcome extends CI_Controller
 	public function formInput()
 	{
 		//panggilviewFormInput
-		$this->load->view('form_input');
+		$this->load->view('mobil/form_input');
 	}
 
 	public function formEdit($id)
@@ -61,7 +61,7 @@ class Welcome extends CI_Controller
 		$DATA = array('data_mobil' => $recordMobil);
 
 		//panggilviewFormEdit
-		$this->load->view('form_edit', $DATA);
+		$this->load->view('mobil/form_edit', $DATA);
 	}
 
 	public function formDetail($id)
@@ -75,7 +75,7 @@ class Welcome extends CI_Controller
 		$DATA = array('data_mobil' => $recordMobil);
 
 		//panggilviewFormEdit
-		$this->load->view('form_view', $DATA);
+		$this->load->view('mobil/form_view', $DATA);
 	}
 
 	public function InsertMobil()
@@ -104,7 +104,7 @@ class Welcome extends CI_Controller
 		$this->M_Mobil->InsertDataMobil($DataInsert);
 
 		//mengarahkan ke halaman selanjutnya ketika dijalankan
-		redirect(base_url('Welcome/index'));
+		redirect(base_url('Mobil'));
 	}
 
 	public function EditMobil($id)
@@ -129,7 +129,7 @@ class Welcome extends CI_Controller
 		);
 
 		$this->M_Mobil->EditDataMobil($DataUpdate, $id);
-		redirect(base_url());
+		redirect(base_url('Mobil'));
 	}
 
 	public function DeleteMobil($id)

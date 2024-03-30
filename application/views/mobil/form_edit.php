@@ -1,14 +1,14 @@
 <html>
 
 <head>
-    <title>Edit Data</title>
+    <title>Edit Data Mobil</title>
 </head>
 
 <body>
-    <h3>Form Edit Data</h3>
+    <h3>Form Edit Data Mobil</h3>
 
     <table>
-        <form action="<?php echo base_url('Welcome/EditMobil/') . $data_mobil->id ?>" method="post">
+        <form action="<?php echo base_url('Mobil/EditMobil/') . $data_mobil->id ?>" method="post">
             <tr>
                 <td>Merk</td>
                 <td>:</td>

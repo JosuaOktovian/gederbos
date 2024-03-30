@@ -1,15 +1,15 @@
 <html>
 
 <head>
-    <title>Input Data</title>
+    <title>Input Data Mobil</title>
 </head>
 
 <body>
-    <h3>Form Input Data</h3>
+    <h3>Form Input Data Mobil</h3>
 
     <table>
         <!-- mengirimkan aksi form ke controller untuk proses DB-->
-        <form action="<?php echo base_url('Welcome/InsertMobil') ?>" method="post">
+        <form action="<?php echo base_url('Mobil/InsertMobil') ?>" method="post">
 
             <tr>
                 <td>Merk</td>

@@ -5,10 +5,18 @@
 </head>
 
 <body>
-    <h1>DATA</h1>
-    <h3>(Data Mobil)</h3>
+    <h1>DATA MOBIL</h1>
 
-    <button onclick="document.location.href='<?php echo base_url('Welcome/formInput') ?>'">Tambah Data Mobil</button>
+    <table>
+        <tr>
+            <td><b><a href="<?php echo base_url('Home') ?>">Home</a></b></td>
+            <td><b><a href="<?php echo base_url('Mobil') ?>">Data Mobil</a></b></td>
+            <td><b><a href="<?php echo base_url('Pelanggan') ?>">Data Pelanggan</a></b></td>
+            <td><b><a href="<?php echo base_url('Transaksi') ?>">Data Transaksi</a></b></td>
+        </tr>
+    </table>
+
+    <button onclick="document.location.href='<?php echo base_url('Mobil/formInput') ?>'">Tambah Data Mobil</button>
 
     <table>
         <tr>
@@ -35,9 +43,9 @@
                 <td><?php echo $row->varian ?></td>
                 <td><?php echo $row->jenis_kendaraan ?></td>
                 <td>
-                    <a href="<?php echo base_url('Welcome/formDetail/') . $row->id ?>">View</a>
-                    <a href="<?php echo base_url('Welcome/formEdit/') . $row->id ?>">Edit</a>
-                    <a href="<?php echo base_url('Welcome/DeleteMobil/') . $row->id ?>">Delete</a>
+                    <a href="<?php echo base_url('Mobil/formDetail/') . $row->id ?>">View</a>
+                    <a href="<?php echo base_url('Mobil/formEdit/') . $row->id ?>">Edit</a>
+                    <a href="<?php echo base_url('Mobil/DeleteMobil/') . $row->id ?>">Delete</a>
                 </td>
             </tr>
 

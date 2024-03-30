@@ -55,7 +55,7 @@
             <td>hp</td>
         </tr>
     </table>
-    <button aria-colspan="2" onclick="document.location.href='<?php echo base_url() ?>'">Kembali</button>
+    <button aria-colspan="2" onclick="document.location.href='<?php echo base_url('Mobil') ?>'">Kembali</button>
 
 </body>
 
