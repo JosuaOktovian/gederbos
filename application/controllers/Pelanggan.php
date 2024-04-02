@@ -32,13 +32,12 @@ class Pelanggan extends CI_Controller
         $this->load->view('pelanggan/form_input');
     }
 
-    //public function getDataById($id)
-    //{
-    //    $recordPelanggan = $this->M_Pelanggan->getDataPelangganDetail($id);
-    //    //memasukkan data pada elemen input
-    //    $DATA = array('data_pelanggan' => $recordPelanggan);
-    //     return $DATA;
-    //}
+    public function getDataById($id)
+    {
+        //memasukkan data pada elemen input
+        $DATA = array('data_pelanggan' => $this->M_Pelanggan->getDataPelangganDetail($id));
+        return $DATA;
+    }
 
     public function formEdit($id)
     {
@@ -46,9 +45,11 @@ class Pelanggan extends CI_Controller
         //echo print_r($id);
         //echo "</prev>";
         //memanggil data detail mobil
-        $recordPelanggan = $this->M_Pelanggan->getDataPelangganDetail($id);
+        //$recordPelanggan = $this->M_Pelanggan->getDataPelangganDetail($id);
         //memasukkan data pada elemen input
-        $DATA = array('data_pelanggan' => $recordPelanggan);
+        //$DATA = array('data_pelanggan' => $recordPelanggan);
+
+        $DATA = $this->getDataById($id);
 
         //panggilviewFormEdit
         $this->load->view('Pelanggan/form_edit', $DATA);
@@ -60,9 +61,10 @@ class Pelanggan extends CI_Controller
         //echo print_r($id);
         //echo "</prev>";
         //memanggil data detail pelanggan
-        $recordPelanggan = $this->M_Pelanggan->getDataPelangganDetail($id);
+        //$recordPelanggan = $this->M_Pelanggan->getDataPelangganDetail($id);
         //memasukkan data pada elemen input
-        $DATA = array('data_pelanggan' => $recordPelanggan);
+        //$DATA = array('data_pelanggan' => $recordPelanggan);
+        $DATA = $this->getDataById($id);
 
         //panggilviewFormEdit
         $this->load->view('pelanggan/form_view', $DATA);
